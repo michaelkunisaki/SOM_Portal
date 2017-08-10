@@ -12,6 +12,7 @@ import {
 import s from './Home.css';
 import StatWidget from '../../components/Widget';
 import Donut from '../../components/Donut';
+import AppChat from '../Chat/AppChat'
 
 import {
   Tooltip,
@@ -256,11 +257,11 @@ function Home(props, context) {
 
           <Panel
             header={<span>
-              <i className="fa fa-bar-chart-o fa-fw" /> Donut Chart Example
+                <i className=" fa fa-comments fa-fw" /> Chat Example
             </span>}
           >
             <div>
-              <Donut data={data} color="#8884d8" innerRadius="70%" outerRadius="90%" />
+              <AppChat />
             </div>
           </Panel>
 

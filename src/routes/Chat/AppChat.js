@@ -1,5 +1,5 @@
-﻿require('../App.css');
-require('../Login.css');
+﻿require('./App.css');
+require('./Login.css');
 
 import React from 'react';
 import ChatApp from './ChatApp';
@@ -7,7 +7,7 @@ import ChatApp from './ChatApp';
 class AppChat extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { username: '' };
+    this.state = { username: 'Michael' };
 
     // Bind 'this' to event handlers. React ES6 does not do this by default
     this.usernameChangeHandler = this.usernameChangeHandler.bind(this);
@@ -24,27 +24,27 @@ class AppChat extends React.Component {
   }
 
   render() {
-    if (this.state.submitted) {
+    //if (this.state.submitted) {
       // Form was submitted, now show the main App
       return (
         <ChatApp username={this.state.username} />
       );
-    }
+    //}
 
     // Initial page load, show a simple login form
-    return (
-      <form onSubmit={this.usernameSubmitHandler} className="username-container">
-        <h1>React Instant Chat</h1>
-        <div>
-          <input
-            type="text"
-            onChange={this.usernameChangeHandler}
-            placeholder="Enter a username..."
-            required />
-        </div>
-        <input type="submit" value="Submit" />
-      </form>
-    );
+    //return (
+    //  <form onSubmit={this.usernameSubmitHandler} className="username-container">
+    //    <h1>React Instant Chat</h1>
+    //    <div>
+    //      <input
+    //        type="text"
+    //        onChange={this.usernameChangeHandler}
+    //        placeholder="Enter a username..."
+    //        required />
+    //    </div>
+    //    <input type="submit" value="Submit" />
+    //  </form>
+    //);
   }
 
 }

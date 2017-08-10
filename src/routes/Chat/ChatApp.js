@@ -1,4 +1,4 @@
-﻿require('../ChatApp.css');
+﻿require('./ChatApp.css');
 
 import React from 'react';
 import io from 'socket.io-client';
@@ -37,14 +37,14 @@ class ChatApp extends React.Component {
 
   addMessage(message) {
     // Append the message to the component state
-    const messages = this.state.messages;
+    var messages = this.state.messages;
     messages.push(message);
     this.setState({ messages });
   }
 
   render() {
     return (
-      <div className="container">
+      <div className="chat-container">
         <h3>React Chat App</h3>
         <Messages messages={this.state.messages} />
         <ChatInput onSend={this.sendHandler} />
