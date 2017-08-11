@@ -1,15 +1,9 @@
-body {
+﻿.chat-container {
+  max-height: 30vh;
   font-family: 'proxima-nova', sans-serif;
-  margin: 0;
 }
 
-html, body, #app, .container {
-  min-height: 100vh;
-  max-height: 100vh;
-  max-width: 100%;
-}
-
-input[type="text"] {
+.chat-container input[type="text"] {
   margin: 10px 0px;
   height: 60px;
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
@@ -25,12 +19,12 @@ input[type="text"] {
   transition: border-color 0.2s ease-in-out;
 }
 
-input[type="text"]:focus {
+.chat-container input[type="text"]:focus {
   border: 1px solid #AF9570;
   outline: none !important;
 }
 
-input[type="submit"] {
+.chat-container input[type="submit"] {
   background-color: #323232;
   color: white;
   font: 700 1rem "proxima-nova",sans-serif;
@@ -49,7 +43,7 @@ input[type="submit"] {
   margin-top: 20px;
 }
 
-input[type="submit"]:hover {
+.chat-container input[type="submit"]:hover {
   -webkit-box-shadow: -10px 10px 0px rgba(50,50,50,0.15);
   -moz-box-shadow: -10px 10px 0px rgba(50,50,50,0.15);
   box-shadow: -10px 10px 0px rgba(50,50,50,0.15);

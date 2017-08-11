@@ -1,10 +1,10 @@
-﻿require('./App.css');
-require('./Login.css');
-
+﻿
 import React from 'react';
 import ChatApp from './ChatApp';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import s from './ChatContainer.css';
 
-class AppChat extends React.Component {
+class ChatContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = { username: 'Michael' };
@@ -48,7 +48,7 @@ class AppChat extends React.Component {
   }
 
 }
-AppChat.defaultProps = {
+ChatContainer.defaultProps = {
 };
 
-export default AppChat;
+export default withStyles(s) (ChatContainer);

@@ -1,10 +1,10 @@
-﻿require('./ChatApp.css');
-
-import React from 'react';
+﻿import React from 'react';
 import io from 'socket.io-client';
 
 import Messages from './Messages';
 import ChatInput from './ChatInput';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import s from './ChatApp.css';
 
 class ChatApp extends React.Component {
   socket = {};
@@ -45,7 +45,6 @@ class ChatApp extends React.Component {
   render() {
     return (
       <div className="chat-container">
-        <h3>React Chat App</h3>
         <Messages messages={this.state.messages} />
         <ChatInput onSend={this.sendHandler} />
       </div>
@@ -57,4 +56,4 @@ ChatApp.defaultProps = {
   username: 'Anonymous'
 };
 
-export default ChatApp;
+export default withStyles(s) (ChatApp);

@@ -1,4 +1,4 @@
-.container {
+﻿.chat-container {
   display: flex;
   flex-direction: column;
 }
@@ -10,7 +10,7 @@
   padding: 20px;
 }
 
-h3 {
+.chat-container h3 {
   text-align: center;
   padding: 20px 0;
   margin: 0;
